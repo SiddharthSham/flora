@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Be+Vietnam|Roboto+Slab:700&display=swap');
+
+$violet: #7E28C5;
+$grape: #832388;
+$wine: #B92332;
+$plum: #D23E35;
+$ash: #DDE7D1;
+
+$primary: $violet;
+$link: $grape;
+$family-primary: 'Be Vietnam', sans-serif;
+$footer-background-color: #fff;
+
+@import "~bulma/bulma";
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+:root{
+	scroll-behavior: smooth;
+}
+
+* {
+	::selection {
+		background-color: $grape;
+		color: $ash; 
+	}
+}
+
+.display, h1, h2, h3, h4, h5, h6, a {
+	font-family: 'Roboto Slab', serif;
+}
+
+.text, p, main {
+	font-family: 'Be Vietnam', sans-serif;
+	line-height: 2.6rem;
+}
+
+p {
+	padding-top: 1.5rem;
+}
