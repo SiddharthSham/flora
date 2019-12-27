@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "violet",
+  "description": "Head to the headless CMS, Chrysanthemum",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
