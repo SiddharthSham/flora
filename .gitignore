@@ -86,3 +86,7 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+# db config
+.Violet/src/db.js
+Violet/src/db.js
