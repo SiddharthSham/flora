@@ -1,6 +1,6 @@
 <script>
 	import MediumEditor from 'medium-editor'
-	import { onMount } from 'svelte';
+	import { onMount, tick } from 'svelte';
 	import { posts_db } from './db.js'
 	import MicroModal from 'micromodal'
 
@@ -10,7 +10,22 @@
 	onMount(() => {
 		editor = new MediumEditor('.editable');
 		MicroModal.init();
+		title = localStorage.getItem("chrys-title");
+		html = localStorage.getItem("chrys-content");
+		editor.setContent(title, 0)
+		editor.setContent(html, 2)
 	})
+
+	const saveDraft = () => {
+		title = editor.getContent(0)
+		html = editor.getContent(2)
+		console.log(title);
+		localStorage.setItem('chrys-title', title);
+		localStorage.setItem('chrys-content', html);
+		modal_title = "Draft saved! ;"
+		modal_content = "Come back to work on this when you are older, and hence, wiser. 👍"
+		MicroModal.show('modal-1')
+	};
 
 	const publish = () => {
 		flag = false
@@ -46,6 +61,7 @@
 	<h1 class="editable title is-size-1">Title</h1>
 	<h3 class="editable subtitle is-size-4">Subtitle</h3>
 	<p class="editable content is-size-4">Click here to start your amazing story &#128150;</p>
+	<div class="buttons">
 	<button class="{flag?"button is-dark is-rounded is-medium publish":"button is-dark is-rounded is-medium is-loading"}" on:click={publish}>
 		{#if !written}
 			Publish!
@@ -53,6 +69,10 @@
 			Edit
 		{/if}
 	</button>
+	<button class="button is-dark is-rounded is-medium" on:click={saveDraft}>
+		Save draft
+	</button>
+	</div>
 </div>
 
 <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
