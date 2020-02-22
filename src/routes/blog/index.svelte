@@ -14,11 +14,17 @@ h1 {
 	margin-bottom: 4rem;
 }
 
+.pad-top {
+	padding-top: 3.5rem;
+}
+
 </style>
 
 <svelte:head>
 	<title>Blog &#128221;</title>
 </svelte:head>
+
+<div class="container pad-top">
 
 <h1 class="is-size-1 rellax" data-rellax-speed="3">My posts &#128221;</h1>
 
@@ -34,4 +40,4 @@ h1 {
 	<p style="color: red">{error.message}</p>
 {/await}
 
-	
+</div>

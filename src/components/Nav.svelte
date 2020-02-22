@@ -1,5 +1,5 @@
 <script>
-	export let segment;
+	// export let segment;
 	
 	let flag=false
 	const navToggle = () => {
@@ -32,6 +32,7 @@
 		<div class="navbar-end">
 			<a href='.' class="navbar-item is-size-4" on:click={navToggle}>home</a>
 			<a href='about' class="navbar-item is-size-4" on:click={navToggle}>about</a>
+			<a href='compose' class="navbar-item is-size-4" on:click={navToggle}>compose</a>
 			<a rel=prefetch href='blog' class="navbar-item is-size-4" on:click={navToggle}>blog</a>
 		</div>
 	</div>

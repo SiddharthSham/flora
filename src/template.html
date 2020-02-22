@@ -12,6 +12,8 @@
 	<!-- <link rel='stylesheet' href='global.scss'> -->
 	<link rel='manifest' href='manifest.json'>
 	<link rel='icon' type='image/png' href='watercolor_png.webp'>
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/medium-editor/5.23.3/css/themes/beagle.min.css">
 
 	<!-- Sapper generates a <style> tag containing critical CSS
 	     for the current page. CSS for the rest of the app is
@@ -31,5 +33,7 @@
 	     and anything else it needs to hydrate the app and
 	     initialise the router -->
 	%sapper.scripts%
+	<script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
+	<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 </body>
 </html>
