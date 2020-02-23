@@ -10,7 +10,7 @@
 </style>
 
 <Nav {segment} />
-<section>
+<section class="container is-fluid">
 	<main>
 		<slot></slot>
 	</main>
