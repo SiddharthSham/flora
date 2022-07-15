@@ -27,7 +27,7 @@
     "sapper": "^0.27.0",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.2",
-    "svelte": "^3.17.0",
+    "svelte": "^3.49.0",
     "svelte-loader": "^2.9.0",
     "webpack": "^4.41.5"
   }
